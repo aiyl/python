@@ -1,16 +1,17 @@
 def itoBase(num, from_base, to_base):
     try:
-
-        if isinstance(num, str):
-            n = int(num, from_base)
-        else:
-            n = int(num)
-        char = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-        if n < to_base:
-            return char[n]
-        else:
-            return itoBase(n // to_base, 10, to_base) + char[n % to_base]
-
+        if int(num) >= 0:
+            if isinstance(num, str):
+                n = int(num, from_base)
+            else:
+                n = int(num)
+            char = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+            if n < to_base:
+                return char[n]
+            else:
+                return itoBase(n // to_base, 10, to_base) + char[n % to_base]
+        print('Некорректные данные! ')
+        exit()
     except Exception as e:
         print('Некорректные данные! ', e)
 
