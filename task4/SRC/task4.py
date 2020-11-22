@@ -7,7 +7,7 @@ if __name__ == "__main__":
     j = 0
     i = 0
     check = False
-    while str1 != ''  and len(str2) >= 1:
+    while str1 != '' and str2 != '':
 
         if str1[i] == str2[j] or str2[j] == '*':
             if str2[j] == '*':
@@ -25,9 +25,16 @@ if __name__ == "__main__":
             s = len(str2)
             str1 = str1[1: (len(str1))]
 
-    if str1 == '' and len(str2) >= 1:
+    if len(str2) >= 0:
         for l in range(len(str2)):
             if str2[l] == '*':
+                bool *= True
+            else:
+                bool *= False
+
+    if len(str1) >= 0:
+        for l in range(len(str1)):
+            if str1[l] == '*' or check == True:
                 bool *= True
             else:
                 bool *= False
