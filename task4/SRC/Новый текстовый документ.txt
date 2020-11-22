@@ -1,0 +1,27 @@
+    while j < (len(str2)) :
+
+        if str1[i] == str2[j] or str2[j] == '*':
+            if i < len(str1) - 1:
+                i += 1
+            if j < len(str2):
+                j += 1
+        elif len(str1) <= 2 and str1[i] != str2[j]:
+            bool = False
+            break
+
+        elif str1[i] != str2[j] and str2[j-1] != '*':
+            bool = False
+            break
+
+        elif str1[i] != str2[j] and str2[j-1] == '*':
+            s = len(str2)
+            if j == len(str2) - 1:
+                bool = False
+                break
+            i += 1
+
+
+    if bool == True:
+        print('OK')
+    else:
+        print('KO')
