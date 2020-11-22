@@ -69,6 +69,7 @@ if __name__ == "__main__" :
         z2 = line.z1 + (line.z2 - line.z1) * t2
         print(x1, y1,z1, '\n', x2, y2, z2)
 
+
 # x = 1 + (42)*t
 # y = 0.5 + (-15.1)*t
 # z = 15 + (-14.96)*t
